@@ -13,7 +13,7 @@ Es necesario tener instalado:
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone <url-del-repositorio>
+   git clone https://github.com/martinforger/alquiler-stands
    cd alquiler-stands
    ```
 2. **Levantar el contenedor:** Ejecuta el siguiente comando en la terminal:
