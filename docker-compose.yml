@@ -1,0 +1,24 @@
+services:
+  db-alquiler:
+    image: postgres:latest
+    container_name: alquiler-stands
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=alquiler_db
+    ports:
+      - "5431:5432"
+    volumes:
+      # Persistencia de datos local
+      - postgres_data:/var/lib/postgresql
+      # Scripts de inicialización automática
+      - ./sql:/docker-entrypoint-initdb.d
+    networks:
+      - bi-network
+
+volumes:
+  postgres_data:
+
+networks:
+  bi-network:
+    driver: bridge
